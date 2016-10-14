@@ -34,13 +34,11 @@ class PromptContainer extends React.Component {
 		});
 	}
 	render() {
-		return (
-			<Prompt
+		return <Prompt
 				onSubmitUser={this.handleSubmitUser}
 				onUpdateUser={this.handleUpdateUser}
 				header={this.props.route.header}
 				username={this.state.username} />
-		)
 	}
 }
 

@@ -4,10 +4,6 @@ import styles from '../styles';
 import UserDetailsBox from './UserDetailsBox';
 import MainContainer from '../containers/MainContainer';
 
-function puke(obj) {
-	return <pre>{JSON.stringify(obj, null, " ")}</pre>
-}
-
 const ConfirmBattle = (props) => (
 	props.isLoading === true
 	? <p> LOADING </p>
@@ -31,7 +27,6 @@ const ConfirmBattle = (props) => (
 				</Link>
 			</div>
 		</div>
-
 	</MainContainer>
 )
 

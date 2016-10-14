@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import styles from '../styles';
-import UserDetailsBox from '../components/UserDetailsBox';
+import UserDetailsBox from './UserDetailsBox';
 import MainContainer from '../containers/MainContainer';
 
 const StartOver = (props) => (
@@ -18,7 +18,7 @@ const Results = (props) => {
 	}
 	var tie = "";
 	if (props.score[0] === props.score[1]) {
-		tie = <h2>It's a tie!</h2>
+		tie = <h2>It&#39;s a tie!</h2>
 	}
 	var winningIndex = props.score[0] > props.score[1] ? 0 : 1;
 	var losingIndex = winningIndex === 0 ? 1 : 0;
