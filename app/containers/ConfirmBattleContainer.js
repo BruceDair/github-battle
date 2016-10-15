@@ -19,10 +19,7 @@ class ConfirmBattleContainer extends React.Component {
 					isLoading: false,
 					playersInfo: [players[0], players[1]]
 				});
-			}.bind(this)).
-			catch(function(err) {
-				console.warn("github error:", err);
-			});
+			}.bind(this));
 	}
 	handleInitiateBattle() {
 		this.context.router.push({

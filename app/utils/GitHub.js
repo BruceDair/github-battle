@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Log from './Log';
 
 //var id = "client id";
 //var sec = "client secret";
@@ -46,7 +47,10 @@ export default {
 				return user.data;
 			});
 		}).catch(function(err) {
-			console.warn("github error:", err);
+			return Log.Error(err.statusText, {
+				error: err,
+				players: players
+			});
 		});
 	},
 	battle: function(players) {
@@ -55,7 +59,10 @@ export default {
 		return axios.all([p1data, p2data]).
 			then(calculateScores).
 			catch(function(err) {
-				console.warn("github battle error:", err);
+				return Log.Error(err.statusText, {
+					error: err,
+					players: players
+				});
 			});
 	}
 };
