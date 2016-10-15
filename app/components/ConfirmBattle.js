@@ -3,10 +3,11 @@ import { Link } from 'react-router';
 import styles from '../styles';
 import UserDetailsBox from './UserDetailsBox';
 import MainContainer from '../containers/MainContainer';
+import Loading from './Loading';
 
 const ConfirmBattle = (props) => (
 	props.isLoading === true
-	? <p> LOADING </p>
+	? <Loading speed={800} text="Waiting" />
 	: <MainContainer>
 		<h1>Confirm players</h1>
 		<div className="col-sm-8 col-sm-offset-2">

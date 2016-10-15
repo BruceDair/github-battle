@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import styles from '../styles';
 import UserDetailsBox from './UserDetailsBox';
 import MainContainer from '../containers/MainContainer';
+import Loading from './Loading';
 
 const StartOver = (props) => (
 	<div className="col-sm-12" style={styles.space}>
@@ -14,7 +15,7 @@ const StartOver = (props) => (
 
 const Results = (props) => {
 	if (props.isLoading) {
-		return <p>LOADING...</p>
+		return <Loading />
 	}
 	var tie = "";
 	if (props.score[0] === props.score[1]) {
