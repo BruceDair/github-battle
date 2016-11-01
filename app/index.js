@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Raven from 'raven-js';
 import routes from './config/routes';
 
-var sentryDSN = "your-sentry-dsn";
+//var sentryDSN = "your-sentry-dsn";
 
 var AppInfo = {
 	name: "GitHub Battle",
@@ -11,6 +11,7 @@ var AppInfo = {
 	version: "1.0"
 };
 
+/*
 window.onerror = function() {
 	Raven.showReportDialog();
 }
@@ -21,5 +22,6 @@ Raven.config(sentryDSN, {
 		branch: AppInfo.branch
 	}
 }).install();
+*/
 
 ReactDOM.render(routes, document.getElementById('app'));
